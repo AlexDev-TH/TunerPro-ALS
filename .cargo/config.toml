@@ -1,0 +1,4 @@
+# The C runtime is built into ALS.exe, so it runs on a computer that has no
+# Visual C++ Redistributable installed.
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]

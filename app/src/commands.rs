@@ -1537,6 +1537,7 @@ pub fn sample_project(id: u64) -> Project {
 impl eframe::App for App {
     fn ui(&mut self, ui: &mut egui::Ui, _frame: &mut eframe::Frame) {
         self.frame_ui(ui);
+        crate::report::frame_drawn();
     }
 }
 

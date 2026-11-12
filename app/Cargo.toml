@@ -1,6 +1,6 @@
 [package]
 name = "als"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 
 [[bin]]
@@ -8,7 +8,8 @@ name = "ALS"
 path = "src/main.rs"
 
 [dependencies]
-eframe = "0.37"
+# wgpu (Direct3D 12 or Vulkan) draws the window; glow (OpenGL) is the fallback for older graphics.
+eframe = { version = "0.37", features = ["glow"] }
 egui = "0.37"
 image = { version = "0.25", default-features = false, features = ["png"] }
 regex = "1"

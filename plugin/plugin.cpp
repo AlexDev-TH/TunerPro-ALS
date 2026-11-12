@@ -25,7 +25,7 @@
 namespace {
 
 const wchar_t kName[] = L"ALS";
-const char kVersion[] = "1.0.0";
+const char kVersion[] = "1.0.1";
 // The mark ALS.exe puts on the message that carries an XDF path: "ADXF".
 const ULONG_PTR kLoadXdf = 0x41445846;
 const UINT_PTR kSubclassId = 0x414C5331;  // "ALS1"
@@ -498,8 +498,8 @@ void RunItem(HWND owner, Item item) {
         case kOpenEmpty: StartAls(owner, false); break;
         case kAbout:
             MessageBoxW(owner,
-                        Say(L"ALS 1.0.0\nพัฒนาโดย AlexDev\n\nเปิดไฟล์ที่ TunerPro เปิดอยู่ในโปรแกรม ALS เพื่อหาแมพ ครอบแมพ และปรับจูน\nแล้วส่งแมพกลับมาเป็น XDF",
-                            L"ALS 1.0.0\nDeveloped by AlexDev\n\nOpens the files TunerPro has open in ALS, to find, mark and tune maps,\nand takes the maps back as an XDF."),
+                        Say(L"ALS 1.0.1\nพัฒนาโดย AlexDev\n\nเปิดไฟล์ที่ TunerPro เปิดอยู่ในโปรแกรม ALS เพื่อหาแมพ ครอบแมพ และปรับจูน\nแล้วส่งแมพกลับมาเป็น XDF",
+                            L"ALS 1.0.1\nDeveloped by AlexDev\n\nOpens the files TunerPro has open in ALS, to find, mark and tune maps,\nand takes the maps back as an XDF."),
                         kName, MB_OK | MB_ICONINFORMATION);
             break;
         default: break;

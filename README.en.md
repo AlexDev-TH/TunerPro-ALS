@@ -47,6 +47,14 @@ Documents\TunerPro Files\Plugins
 
 To remove it, delete `ALS.dll` and the `ALS` folder from there.
 
+### If the window does not appear
+
+- ALS draws with Direct3D 12 or Vulkan first, and switches to OpenGL by itself on a computer where those do not work
+- If it cannot start at all, a message says why, and the reason is kept in `%APPDATA%\ALS\ALS-start.log`. Updating the graphics driver usually fixes it
+- With no window and no message, check whether the antivirus program has held `ALS.exe` back (Windows Security, Protection history)
+- To use OpenGL every time, make a file `%APPDATA%\ALS\drawing.txt` holding the word `opengl`
+- The Visual C++ Redistributable is not needed
+
 ## Use
 
 1. Open a bin (and an XDF, if there is one) in TunerPro, and save
